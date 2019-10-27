@@ -1,2 +1,0 @@
-# privatemp.github.io
-huansohn
