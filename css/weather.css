@@ -36,7 +36,7 @@
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid white;
-    padding-bottom: 10%;
+    padding-bottom: 30px;
 }
 .weather-location, .weather-country{
     color: white;
@@ -44,7 +44,7 @@
 }
 
 .weather-icon {
-    width: 30%;
+    width: 100px;
     
 }
 .row2{
