@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Api</title>
+    <link rel="stylesheet" href="../css/weather.css">   
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+</head>
+<body>
+    <div id="Wrapper">
+        <h1 class="Title">Enter a City</h1>
+            <div class="Input">
+                <input type="text" id="input" class="Input-text" placeholder="City, e.g Linz">
+                <button class="pure-button" onclick="getCityName()">SEARCH</button>
+                <label for="input" id="input-fading"class="Input-label">Searching...</label>
+            </div>
+    </div>
+    </div>
+    <div id="container">
+        <div class="weather-box">
+            <div class="row1">
+                <h1 class="weather-country"></h1>
+                <h2 class="weather-location"></h2>
+                <canvas class="weatherType" id="icon1" width="128" height="128"></canvas>
+            </div>
+            <div class="row2">
+                <h1 class="temp"></h1>
+                <span class="temp-type">°C</span>
+                <div class="minmax">
+                    <h2 class="weather-min"></h2>
+                    <span class="degree"></span>
+                    <h2 class="weather-max"></h2>
+                    <span class="degree"></span>
+                </div>
+            </div>
+            <h2 class="weather-description"></h2>
+            <h2 class="weather-windspeed"></h2>
+            <h2 class="weather-cloudiness"></h2>
+        </div>
+        <div id="snackbar">Click On The °C To Switch To The American Standards</div>
+    </div>
+    <script src="../js/skycons.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script> 
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Chat - Customer Module</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="../css/chat.css" />
+  <script src="../js/page.js"></script>
+</head>
+<?php
+if(!isset($_SESSION['name'])){
+    loginForm();
+}
+else{
+?>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="page.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="weather.html">WEATHER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="calendar.html">CALENDAR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="chat.html">CHAT(not working)</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            GAMES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../../games/snake/html/snake.html">SNAKE</a>
+            <a class="dropdown-item" href="../../games/tetris/html/tetris.html">TETRIS</a>
+            <a class="dropdown-item" href="../../games/pacman/html/pacman.html">PACMAN</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>   
+
+<div id="wrapper">
+    <div id="menu">
+        <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p>
+        <p class="logout"><a id="exit" href="page.html">Exit Chat</a></p>
+        <div style="clear:both"></div>
+    </div>    
+    <div id="chatbox"></div>
+     
+    <form name="message" action="">
+        <input name="usermsg" type="text" id="usermsg" size="63" />
+        <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+    </form>
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script type="text/javascript">
+// jQuery Document
+$(document).ready(function(){
+    $("#exit").click(function(){
+		var exit = confirm("Are you sure you want to end the session?");
+		if(exit==true){window.location = 'index.php?logout=true';}		
+	});
+});
+</script>
+<?php
+}
+?>
+</script>
+</body>
+</html>
