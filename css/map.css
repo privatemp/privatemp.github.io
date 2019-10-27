@@ -2,11 +2,18 @@
 iframe 
 {
  display: block; 
+ min-height: 300px;
+ min-width: 150px;
  width: 600px;
  height: 600px;
- margin-left: 50%;
- margin-top: 50px; 
+ margin-top: 10%; 
+ margin-left: 20%;
  border: none; 
  overflow-y: auto; 
  overflow-x: hidden;
+}
+
+@-ms-viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
 }
