@@ -1,0 +1,15 @@
+@media screen and (max-width: 481px){
+  iframe 
+  {
+   display: block; 
+   width: 600px;
+   height: 600px;
+   margin-left: 50%;
+   margin-top: 50px; 
+   border: none; 
+   overflow-y: auto; 
+   overflow-x: hidden;
+  }
+  
+  
+}

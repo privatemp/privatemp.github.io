@@ -1,0 +1,39 @@
+#chatpng
+{
+    height: 200px;
+    width: 200px;
+}
+
+#wthpng
+{
+    height: 200px;
+    width: 200px;
+}
+#calendarjpeg
+{
+    height: 200px;
+    width: 200px;
+}
+
+#box    
+{
+    border: 1px solid white;
+    width: 300px;
+    margin-left: 200px;
+}
+
+.fakeimg {
+    position: relative;
+    
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.fakeimg:hover {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+}
+
+#time{
+    float: right;
+}
